@@ -1,8 +1,8 @@
 # Importação:
-# from arquivo import Classe # 1. Mesmo diretório:
-# from pasta.arquivo import Classe # 2. Diretório filho (um nível abaixo):
-# from ..arquivo import Classe  # 3. Diretório pai (um nível acima):
-# from ...arquivo import Classe # 4. Diretório avô (dois níveis acima):
+# from arquivo import Classe # 1. Mesmo diretório
+# from pasta.arquivo import Classe # 2. um diretório abaixo
+# from ..arquivo import Classe  # 3. um diretório acima
+# from ...arquivo import Classe # 4. dois diretórios acima
 
 from carro import carro
 from moto import moto
@@ -10,17 +10,17 @@ from moto import moto
 # Criando objetos a partir do script externo
 
 # Criando um objeto da classe filha 'carro'
-meu_carro = carro("Ford", "Mustang", 2020, "123456QWERTY", 2, 450)
+c1 = carro("Ford", "Mustang", 2020, "123456QWERTY", 2, 450)
 
 # Criando um objeto da classe filha 'moto'
-minha_moto = moto("Honda", "CB 500", 2022, "098765POIUYT", 500)
+m1 = moto("Honda", "CB 500", 2022, "098765POIUYT", 500)
 
-# print(meu_carro.__dict__) #não funciona com __slots__
-# print(minha_moto.__dict__)
+# print(c1.__dict__) #não funciona com __slots__
+# print(m1.__dict__)
 
-print(meu_carro)
-print(minha_moto)
-print(minha_moto.get_chassi())
+print(c1)
+print(m1)
+print(m1.get_chassi())
 
 
 '''
