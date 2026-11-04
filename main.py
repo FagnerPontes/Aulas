@@ -1,7 +1,7 @@
 # Importação:
 # from arquivo import Classe # 1. Mesmo diretório:
-# from pasta.arquivo import Classe # 2. Diretório filho (pasta abaixo):
-# from ..arquivo import Classe  # 3. Diretório pai (pasta acima - UM nível acima):
+# from pasta.arquivo import Classe # 2. Diretório filho (um nível abaixo):
+# from ..arquivo import Classe  # 3. Diretório pai (um nível acima):
 # from ...arquivo import Classe # 4. Diretório avô (dois níveis acima):
 
 from carro import carro
