@@ -45,6 +45,34 @@ print(veiculo_1.marca)
 print(veiculo_1.modelo)
 print(veiculo_1.ano)
 
+
+'''
+Qual o significado do "__" antes e depois do nome?
+Em Python, os dois sublinhados antes e depois do nome (como em __init__) são chamados de dunder (abreviação de double underscore, ou sublinhado duplo).
+
+Eles indicam métodos especiais
+Métodos reservados pelo interpretador
+funções internas e de controle de fluxo que ele mesmo gerencia nos bastidores.
+
+Execução automática:
+
+Prevenção de conflitos: Esse formato serve para evitar que o programador crie acidentalmente um método customizado com o mesmo nome de funções internas do sistema.
+'''
+
+
+'''
+Qual a função do self no parâmetro do construtor?
+O self representa a instância atual do objeto que está sendo criada ou manipulada.
+
+É uma ponte para que o objeto consiga acessar e modificar os seus próprios atributos e métodos.
+
+Por que ele é necessário?
+Quando você define uma classe, você está criando um "molde". A partir desse molde, você pode criar dezenas de objetos diferentes (vários veiculos, por exemplo). O Python precisa de uma forma de saber qual objeto específico está executando o código naquele momento.
+
+Referência à instância criada e separação de dados: Se você criar dois veiculos diferentes (veiculo1 e veiculo2), o self garante que os dados do veiculo1 fiquem guardados nele próprio, sem misturar com os dados do veiculo2.
+'''
+
+
 '''
 .items() pega todos os pares e 
 .keys() pega todos os pares e list(...) 
@@ -79,31 +107,4 @@ Corolla = ("Toyota", "Corolla", 2022)
 veiculo_4 = veiculo("Toyota", "Corolla", 2022)
 print(veiculo_4.__dict__)
 
-
-'''
-Qual o significado do "__" antes e depois do nome?
-Em Python, os dois sublinhados antes e depois do nome (como em __init__) são chamados de dunder (abreviação de double underscore, ou sublinhado duplo).
-
-Eles indicam métodos especiais (também chamados de métodos mágicos), e o seu significado principal envolve:
-
-Métodos reservados pelo interpretador: O Python usa o padrão __nome__ para identificar funções internas e de controle de fluxo que ele mesmo gerencia nos bastidores.
-
-Execução automática: No caso específico de __init__, ele funciona como o construtor da classe. Você não o chama manualmente (como objeto.__init__()); em vez disso, o Python o executa automaticamente assim que você cria uma nova instância da classe.
-
-Prevenção de conflitos: Esse formato serve para evitar que o programador crie acidentalmente um método customizado com o mesmo nome de funções internas do sistema.
-'''
-
-'''
-Qual a função do self no parâmetro do construtor?
-Em Python, o self representa a instância atual do objeto que está sendo criada ou manipulada.
-
-Em termos práticos, ele serve como uma ponte para que o objeto consiga acessar e modificar os seus próprios atributos e métodos.
-
-Por que ele é necessário?
-Quando você define uma classe, você está criando um "molde". A partir desse molde, você pode criar dezenas de objetos diferentes (vários veiculos, por exemplo). O Python precisa de uma forma de saber qual objeto específico está executando o código naquele momento.
-
-Referência à instância: Quando você instancia um veiculo (meu_veiculo = veiculo("Toyota", "Corolla", 2022)), o Python passa esse objeto recém-criado automaticamente como o primeiro argumento (self) para o método __init__.
-
-Separação de dados: Se você criar dois veiculos diferentes (veiculo1 e veiculo2), o self garante que os dados do veiculo1 fiquem guardados nele próprio, sem misturar com os dados do veiculo2.
-'''
 """
