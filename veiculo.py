@@ -1,20 +1,18 @@
 # classe veiculo
 class veiculo:
+    # Define rigidamente quais atributos a classe pode ter
+    # Restring memória e destroi __dict__
+    __slots__ = ('marca', 'modelo', 'ano', '__placa')
 
     # Método construtor (__init__)
     def __init__(self, marca, modelo, ano, placa):
 
-        # Atribuir o valor do parâmetro 'marca'
+        # Atribuir valores dos parâmetros públicos
         self.marca = marca
-
-        # Atribuir o valor do parâmetro 'modelo'
         self.modelo = modelo
-
-        # Atribuir o valor do parâmetro 'ano'
         self.ano = ano
-
-        # Atribuir o valor do parâmetro 'placa"
-        self.__placa = placa
+        # Atribuir valores dos parâmetros privados
+        self.__placa = placa 
 
     # Método genérico para exibir as informações do objeto
     def exibir_veiculo(self):
@@ -26,7 +24,7 @@ class veiculo:
         return f"veiculo: {self.marca} {self.modelo}, Ano: {self.ano}"
 
     def get(self):
-        return(self.__dict__)
+        return(self.__dict__) #não funciona com __slots__ atributo interno da classe.
 
     def get_placa(self):
         return self.__placa
