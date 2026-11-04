@@ -1,16 +1,18 @@
 '''
-herança em Python:
-Criar as classes filhas herdando da classe pai veiculo.
-O segredo principal na herança é usar a função super().__init__() dentro do construtor da classe filha. Isso serve para reaproveitar todo o código de inicialização que já existe no pai, evitando que você precise reescrever a atribuição de marca, modelo, ano e placa.
+herança em Python: classes filhas herdando da classe pai.
+A função super().__init__(), dentro do construtor da classe filha,
+serve para reaproveitar todo o código de inicialização que já existe no pai,
 '''
 
 from veiculo import veiculo
 
 class carro(veiculo):
 
-  def __init__(self, marca, modelo, ano, placa, portas, cavalos):
+  __slots__ = ('portas', 'cavalos')
+
+  def __init__(self, marca, modelo, ano, chassi, portas, cavalos):
     # super().__init__ puxa o construtor da classe pai (veiculo)
-    super().__init__(marca, modelo, ano, placa)
+    super().__init__(marca, modelo, ano, chassi)
 
     # Atributos específicos da classe carro
     self.portas = portas
@@ -18,4 +20,4 @@ class carro(veiculo):
 
   # Sobrescrita opcional do __str__ para incluir os novos dados
   def __str__(self):
-    return f"Carro: {self.marca} {self.modelo}, Ano: {self.ano}, Portas: {self.portas}, Cavalos: {self.cavalos}cv"
+    return f"Carro: {self.marca} {self.modelo}, Ano: {self.ano}, Portas: {self.portas}, Cavalos: {self.cavalos}cv, {self.get_chassi()}"
