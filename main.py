@@ -25,8 +25,7 @@ minha_moto = moto("Honda", "CB 500", 2022, "XYZ-9876", 500)
 
 print(meu_carro.__dict__)
 print(minha_moto.__dict__)
-
-
+print(minha_moto.get_placa())
 
 
 '''

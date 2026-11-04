@@ -1,6 +1,6 @@
 '''
-Para criar as classes filhas herdando da classe pai veiculo, você vai usar a herança em Python.
-
+herança em Python:
+Criar as classes filhas herdando da classe pai veiculo.
 O segredo principal na herança é usar a função super().__init__() dentro do construtor da classe filha. Isso serve para reaproveitar todo o código de inicialização que já existe no pai, evitando que você precise reescrever a atribuição de marca, modelo, ano e placa.
 '''
 
